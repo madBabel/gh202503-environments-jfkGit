@@ -3,13 +3,13 @@ on:
     workflow_dispatch:
         inputs:
             target-env:
-                descripcion: Entorno
+                description: Entorno
                 type: environment
                 default: pre
 run-name: "Working with Environments | env - ${{inputs.target-env.default}}"
 jobs:
     echo:
-        runs_on: ubuntu_latest
+        runs-on: ubuntu_latest
         environment: ${{inputs.target-env}}
         env:
             my-env-value: ${{vars.MY_ENV_VALUE}}
